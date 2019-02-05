@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Login',
     'Principal_App.apps.PrincipalAppConfig',
     'Accountant_App.apps.AccountantAppConfig',
+    'Parents_App.apps.ParentsAppConfig',
 ]
 
 MIDDLEWARE = [
