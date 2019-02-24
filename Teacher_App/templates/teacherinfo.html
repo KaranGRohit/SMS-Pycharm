@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for teach in object_list %}
+<div class="teacher">
+    <h3><a href="">Name : {{teach.TFName}}  {{teach.TLname}}</a></h3>
+    <p>City : {{teach.TCity}} </p>
+    <p>Email : {{teach.TEmail}} </p>
+    <p>Class : {{teach.TClass}}</p>
+    <p>Subject : {{teach.TSubject}}</p>
+    <p>Gender : {{teach.Tgender}}</p>
+</div>
+{% endfor %}
+
+{% endblock content %}

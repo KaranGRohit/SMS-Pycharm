@@ -1,14 +1,18 @@
 #from django.views.generic import TemplateView
 from django.shortcuts import render_to_response
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,ListView
 from django.http import HttpResponseRedirect
 #import pymysql
-from Teacher_App.models import Result
+from Teacher_App.models import Result, Teacher
 from django.template.context_processors import csrf
 from django.views import generic
 
 class IndexView(TemplateView):
     template_name = 'teacher/index.html'
+
+class Myteacher(ListView):
+    model = Teacher
+    template_name = 'teacherinfo.html'
 
 
 def Result(request):
