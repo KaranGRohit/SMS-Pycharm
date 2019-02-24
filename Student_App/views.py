@@ -1,12 +1,12 @@
 from django.shortcuts import render_to_response
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.http import HttpResponseRedirect
 #import pymysql
 from Student_App.models import Student
 from django.template.context_processors import csrf
 from django.views import generic
 
-class StudentListView(generic.ListView):
+class StudentListView(ListView):
 	model = Student
 
 
@@ -14,6 +14,9 @@ def getstudentinfo(request):
 	c = {}
 	c.update(csrf(request))
 	return render_to_response('addstudentinfo.html', c)
+
+def studentinfo(request):
+    return render_to_response('studentinfo.html')
 
 def addstudentinfo(request):
     sfname = request.POST.get('sfname', '')
