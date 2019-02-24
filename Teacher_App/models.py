@@ -21,6 +21,9 @@ class Teacher(models.Model):
     )
     Tgender = models.CharField(max_length=1, choices=GENDER_CHOICES,null=True)
 
+    def __str__(self):
+        return self.TFName
+
 class Meta:
     db_table = "Teacher"
 
@@ -35,6 +38,9 @@ class Result(models.Model):
     marks1 = models.IntegerField()
     marks2 = models.IntegerField()
     marks3 = models.IntegerField()
+
+    def __str__(self):
+        return self.Roll_no
 
 class Meta:
     db_table = "Result"
@@ -51,6 +57,9 @@ class Assignments(models.Model):
     assingment = models.CharField(max_length=30)
     deadline = models.DateField()
     submit_status = models.BooleanField()
+
+    def __str__(self):
+        return self.assingment
 
 class Meta:
     db_table = "Assignments"

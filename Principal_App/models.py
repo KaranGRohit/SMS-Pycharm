@@ -11,6 +11,9 @@ class Timetable(models.Model):
     time = models.TimeField()
     day = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.day
+
 class Meta:
     db_table = "TimeTable"
 
@@ -29,3 +32,6 @@ class Principal(models.Model):
         ('F', 'Female'),
     )
     Pgender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+
+    def __str__(self):
+        return self.PFname

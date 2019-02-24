@@ -9,3 +9,6 @@ class Parents(models.Model):
     PrFname = models.CharField(max_length=20)
     PrLname = models.CharField(max_length=20)
     PrContactNo = models.IntegerField()
+
+    def __str__(self):
+        return self.PrFname

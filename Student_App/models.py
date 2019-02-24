@@ -15,5 +15,9 @@ class Student(models.Model):
         ('F', 'Female'),
     )
     Sgender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True)
+
+    def __str__(self):
+        return self.SFName
+
 class Meta:
     db_table = "Student"

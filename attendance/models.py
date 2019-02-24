@@ -10,6 +10,8 @@ class daily_attendance(models.Model):
     attendance_date = models.DateField('date published', default=date.today)
     update_date = models.DateTimeField('date published', default=datetime.now)
 
+
+
 class allmessages(models.Model):
     message_text = models.TextField()
     m_from = models.IntegerField()
