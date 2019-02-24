@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for stud in object_list %}
+<div class="student">
+    <h3><a href="">{{stud.SFName}}</a></h3>
+    <p>{{stud.SAddress}}</p>
+</div>
+{% endfor %}
+
+{% endblock content %}
