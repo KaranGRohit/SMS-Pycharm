@@ -9,14 +9,17 @@ from django.views import generic
 class StudentListView(ListView):
 	model = Student
 
+class Mystudinfo(ListView):
+    model = Student
+    template_name = 'studentinfo.html'
 
 def getstudentinfo(request):
 	c = {}
 	c.update(csrf(request))
 	return render_to_response('addstudentinfo.html', c)
 
-def studentinfo(request):
-    return render_to_response('studentinfo.html')
+#def studentinfo(request):
+#    return render_to_response('studentinfo.html')
 
 def addstudentinfo(request):
     sfname = request.POST.get('sfname', '')
