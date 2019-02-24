@@ -11,6 +11,9 @@ class Accountant(models.Model):
     ALname = models.CharField(max_length=20)
     Email = models.EmailField()
 
+    def __str__(self):
+        return self.AFname
+
 
 class Salary(models.Model):
     ATid = models.ForeignKey(Teacher, models.SET_NULL, blank=True, null=True)
@@ -18,12 +21,17 @@ class Salary(models.Model):
     amnt = models.IntegerField()
     sal_date = models.DateField()
 
+    def __str__(self):
+        return self.amnt
+
 class Fees(models.Model):
     ASId = models.ForeignKey(Student, models.SET_NULL, blank=True, null=True)
     fee = models.IntegerField()
     last_date = models.DateField()
     due_charge = models.IntegerField()
 
+    def __str__(self):
+        return self.fee
 
 
 
