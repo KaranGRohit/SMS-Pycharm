@@ -4,11 +4,8 @@
 
 {% for stud in object_list %}
 <div class="student">
-    <h3>Name : <a href="">{{stud.SFName}} {{stud.SLname}}</a></h3>
-    <p>Address : {{stud.SAddress}}</p>
-    <p>Email : {{stud.SEmail}}</p>
-    <p>Class : {{stud.SClass}}</p>
-    <p>Fee Status : {{stud.SFeeStat}}</p>
+    <h3>Name : <a href="{% url 'student_page' %}">{{stud.SFName}} {{stud.SLname}}</a></h3>
+
 </div>
 {% endfor %}
 

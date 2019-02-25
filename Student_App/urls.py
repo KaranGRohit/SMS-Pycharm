@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^getstudentinfo/addstudentinfo/', views.addstudentinfo),
     url(r'^getstudentinfo/', views.getstudentinfo),
     path('', views.Mystudinfo.as_view(),name='studentinfo'),
+    path('studinfo/', views.studinfo.as_view(), name='student_page'),
     url(r'^addsuccess/', views.addsuccess),
     path('students/', views.StudentListView.as_view(), name='students'),
 

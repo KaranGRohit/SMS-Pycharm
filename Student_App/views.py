@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.http import HttpResponseRedirect
 #import pymysql
 from Student_App.models import Student
@@ -12,6 +12,11 @@ class StudentListView(ListView):
 class Mystudinfo(ListView):
     model = Student
     template_name = 'studentinfo.html'
+
+class studinfo(DetailView):
+    model = Student
+    template_name = 'studdetails.html'
+    context_object_name = 'batman'
 
 def getstudentinfo(request):
 	c = {}
