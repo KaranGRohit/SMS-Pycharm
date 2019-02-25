@@ -25,25 +25,26 @@ def getstudentinfo(request):
 	c.update(csrf(request))
 	return render_to_response('addstudentinfo.html', c)
 
+
 def viewattendance(request):
     attendance = Attendance.objects.order_by('Roll_no')
-    context = {'attendance':attendance}
-    return render(request, 'viewattendance.html', context)
+    ctx = {'attendance':attendance}
+    return render(request, 'viewattendance.html', ctx)
 
 def viewresult(request):
     result = Result.objects.order_by('Roll_no')
-    context = {'result':result}
-    return render(request, 'viewresult.html', context)
+    ctx = {'result':result}
+    return render(request, 'viewresult.html', ctx)
 
 def viewassignment(request):
     assignment = Assignments.objects.order_by('assingment')
-    context = {'assignment':assignment}
-    return render(request, 'viewassignments.html',assignment)
+    ctx = {'assignment':assignment}
+    return render(request, 'viewassignments.html',ctx)
 
 def viewtimetable(request):
     timetable = Timetable.objects.order_by('room_no')
-    context = {'timetable':timetable}
-    return render(request, 'viewtimetable.html',context)
+    ctx = {'timetable':timetable}
+    return render(request, 'viewtimetable.html',ctx)
 
 #def studentinfo(request):
 #    return render_to_response('studentinfo.html')
