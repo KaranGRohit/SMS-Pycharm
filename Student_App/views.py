@@ -1,10 +1,12 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.views.generic import TemplateView, ListView, DetailView
 from django.http import HttpResponseRedirect
 #import pymysql
 from Student_App.models import Student
 from django.template.context_processors import csrf
 from django.views import generic
+from Teacher_App.models import Attendance, Assignments, Result
+from Principal_App.models import Timetable
 
 class StudentListView(ListView):
 	model = Student
@@ -22,6 +24,22 @@ def getstudentinfo(request):
 	c = {}
 	c.update(csrf(request))
 	return render_to_response('addstudentinfo.html', c)
+
+def viewattendance(request):
+    attendance = Attendance.objects.order_by('Roll_no')
+    return render(request, 'viewattendance.html')
+
+def viewresult(request):
+    result = Result.objects.order_by('Roll_no')
+    return render(request, 'viewresult.html')
+
+def viewassignment(request):
+    assignment = Assignments.objects.order_by('assingment')
+    return render(request, 'viewassignments.html')
+
+def viewtimetable(request):
+    timetable = Timetable.objects.order_by('room_no')
+    return render(request, 'viewtimetable.html')
 
 #def studentinfo(request):
 #    return render_to_response('studentinfo.html')

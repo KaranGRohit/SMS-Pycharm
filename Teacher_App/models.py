@@ -45,10 +45,11 @@ class Result(models.Model):
 class Meta:
     db_table = "Result"
 
-#class Attendance(models.Model):
- #   Roll_no = models.ForeignKey(Student,on_delete=models.CASCADE)
-  #  Aid = models.IntegerField()
-   # attendance = models.IntegerField()
+class Attendance(models.Model):
+    Roll_no = models.ForeignKey(Student,on_delete=models.CASCADE)
+    Aid = models.IntegerField()
+    attendance = models.IntegerField()
+
 
 
 class Assignments(models.Model):
