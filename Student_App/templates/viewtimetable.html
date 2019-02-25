@@ -1,3 +1,4 @@
+{% extends 'base2.html' %}
 
 <html lang="en">
 <head>
@@ -5,12 +6,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1><b>TimeTable Page</b></h1>
-
+<h2><b>TimeTable Page</b></h2>
+{% block content %}
 {% for t in mytimetable %}
 
 <div>
-    <h2>Name : {{t.Roll_no}}</h2>
+    <h2><a href="">Name : {{t.Roll_no}}</a></h2>
 </div>
 
 <div>
@@ -21,6 +22,7 @@
 </div>
 
 {% endfor %}
+{% endblock content %}
 </body>
 </html>
 

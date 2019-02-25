@@ -1,3 +1,4 @@
+{% extends 'base2.html' %}
 
 <html lang="en">
 <head>
@@ -5,12 +6,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1><b>Attendance Page</b></h1>
-
+<h2><b>Attendance Page</b></h2>
+{% block content %}
 {% for a in myattendance %}
 
 <div>
-    <h2>Name : {{a.Roll_no}}</h2>
+    <h2><a href="">Name : {{a.Roll_no}}</a></h2>
 </div>
 
 <div>
@@ -18,5 +19,6 @@
 </div>
 
 {% endfor %}
+{% endblock content %}
 </body>
 </html>
