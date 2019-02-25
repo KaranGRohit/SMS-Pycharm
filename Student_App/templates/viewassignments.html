@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
+<h1><b>Assignment Page</b></h1>
 
+{% for a in assignment %}
+
+<div>
+    <h2>Name : {{a.Roll_no}}</h2>
+</div>
+
+<div>
+    <p>Assignment ID : {{a.Aid}}</p>
+    <p>Assignment : {{a.assignment}}</p>
+    <p>Deadline : {{a.deadline}}</p>
+</div>
+
+{% endfor %}
 </body>
 </html>
