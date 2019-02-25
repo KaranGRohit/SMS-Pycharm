@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<h1><b>Attendance Page</b></h1>
 
+{% for a in attendance %}
+
+<div>
+    <h2>Name : {{a.Roll_no}}</h2>
+</div>
+
+<div>
+    <p>Attendance(%) : {{a.attendance}}</p>
+</div>
+
+{% endfor %}
 </body>
 </html>
