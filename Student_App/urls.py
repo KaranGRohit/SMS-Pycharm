@@ -17,3 +17,5 @@ urlpatterns = [
     path('viewtimetable/', views.viewtimetable),
 
 ]
+
+
