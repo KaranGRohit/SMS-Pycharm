@@ -15,7 +15,6 @@ urlpatterns = [
     path('viewresult/', views.viewresult),
     path('viewassignments/', views.viewassignment),
     path('viewtimetable/', views.viewtimetable),
-
 ]
 
 
