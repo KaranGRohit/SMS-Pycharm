@@ -10,6 +10,7 @@ class Timetable(models.Model):
     room_no = models.IntegerField()
     time = models.TimeField()
     day = models.CharField(max_length=20)
+    subject = models.CharField(max_length=20,null=True,blank=True)
 
     def __str__(self):
         return self.day
