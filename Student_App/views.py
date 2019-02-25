@@ -27,23 +27,23 @@ def getstudentinfo(request):
 
 
 def viewattendance(request):
-    attendance = Attendance.objects.order_by('Roll_no')
-    ctx = {'attendance':attendance}
+    myattendance = Attendance.objects.order_by('Roll_no')
+    ctx = {'attendance':myattendance}
     return render(request, 'viewattendance.html', ctx)
 
 def viewresult(request):
-    result = Result.objects.order_by('Roll_no')
-    ctx = {'result':result}
+    myresult = Result.objects.order_by('Roll_no')
+    ctx = {'result':myresult}
     return render(request, 'viewresult.html', ctx)
 
 def viewassignment(request):
-    assignment = Assignments.objects.order_by('assingment')
-    ctx = {'assignment':assignment}
+    myassignment = Assignments.objects.order_by('assingment')
+    ctx = {'assignment':myassignment}
     return render(request, 'viewassignments.html',ctx)
 
 def viewtimetable(request):
-    timetable = Timetable.objects.order_by('room_no')
-    ctx = {'timetable':timetable}
+    mytimetable = Timetable.objects.order_by('room_no')
+    ctx = {'timetable':mytimetable}
     return render(request, 'viewtimetable.html',ctx)
 
 #def studentinfo(request):
