@@ -5,6 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<h1><b>Result Page</b></h1>
 
+{% for r in result %}
+
+<div>
+    <h2>Name : {{r.Roll_no}}</h2>
+</div>
+
+<div>
+    <p>Result ID : {{r.Rid}}</p>
+    <p>Grade : {{r.grade}}</p>
+    <p>Subject : {{r.sub1}} => Marks : {{r.marks1}}</p>
+    <p>Subject : {{r.sub2}} => Marks : {{r.marks2}}</p>
+    <p>Subject : {{r.sub3}} => Marks : {{r.marks3}}</p>
+
+</div>
+
+{% endfor %}
 </body>
 </html>
+
