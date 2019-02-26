@@ -12,6 +12,7 @@
 
 <div class="container">
     <form class="form-signin" method="post" action="{% url 'uploadresult' %}">
+        {% csrf_token %}
         <h4 class="form-signin-heading">Add Result here...</h4>
         <div class="form-group">
             <label for="Roll_no" class="sr-only">Roll_no: </label>
