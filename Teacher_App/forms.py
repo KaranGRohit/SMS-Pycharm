@@ -3,6 +3,13 @@ from django import forms
 from .models import models
 
 class ResultForm(forms.Form):
+
+    Roll_no = forms.IntegerField(widget=forms.TextInput(attrs={
+        'class':'form-control',
+        'placeholder':'Roll_no',
+        'id':'Roll_no',
+    }))
+
     Rid = forms.IntegerField(widget=forms.TextInput(attrs={
         'class':'form-control',
         'placeholder':'Rid',
