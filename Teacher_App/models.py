@@ -39,8 +39,6 @@ class Result(models.Model):
     marks2 = models.IntegerField()
     marks3 = models.IntegerField()
 
-    def __str__(self):
-        return self.Roll_no
 
 class Meta:
     db_table = "Result"

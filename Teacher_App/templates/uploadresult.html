@@ -14,56 +14,44 @@
     <form class="form-signin" method="post" action="{% url 'uploadresult' %}">
         {% csrf_token %}
         <h4 class="form-signin-heading">Add Result here...</h4>
+
         <div class="form-group">
-            <label for="Roll_no" class="sr-only">Roll_no: </label>
-           <!-- <input type="text" id="Roll_no" class="form-control" placeholder="Roll_no" required autofocus/>-->
-            {{form.Roll_no}}
+            <label for="Rid">Rid : </label>
+            <span><input type="text" id="Rid" class="form-control" placeholder="Rid" required autofocus></span>
         </div>
         <div class="form-group">
-            <label for="Rid" class="sr-only">Rid : </label>
-            <!--<input type="text" id="Rid" class="form-control" placeholder="Rid" required autofocus>-->
-            {{form.Rid}}
-        </div>
-        <div class="form-group">
-            <label for="grade" class="sr-only">grade : </label>
-            <!--<input type="text" id="grade" class="form-control" placeholder="grade" required autofocus>-->
-            {{form.grade}}
+            <label for="grade">grade : </label>
+            <input type="text" id="grade" class="form-control" placeholder="grade" required autofocus>
         </div>
 
         <div class="form-group">
-            <label for="sub1" class="sr-only">sub1 : </label>
-            <!--<input type="text" id="sub1" class="form-control" placeholder="sub1" required autofocus>-->
-            {{form.sub1}}
+            <label for="sub1">sub1 : </label>
+            <input type="text" id="sub1" class="form-control" placeholder="sub1" required autofocus>
         </div>
 
        <div class="form-group">
-            <label for="marks1" class="sr-only">marks1 : </label>
-            <!--<input type="text" id="marks1" class="form-control" placeholder="marks1" required autofocus>-->
-           {{form.marks1}}
+            <label for="marks1">marks1 : </label>
+            <input type="text" id="marks1" class="form-control" placeholder="marks1" required autofocus>
         </div>
 
         <div class="form-group">
-            <label for="sub2" class="sr-only">sub2 : </label>
-            <!--<input type="text" id="sub2" class="form-control" placeholder="sub2" required autofocus>-->
-            {{form.sub2}}
+            <label for="sub2">sub2 : </label>
+            <input type="text" id="sub2" class="form-control" placeholder="sub2" required autofocus>
         </div>
 
        <div class="form-group">
-            <label for="marks2" class="sr-only">marks2 : </label>
-            <!--<input type="text" id="marks2" class="form-control" placeholder="marks2" required autofocus>-->
-            {{form.marks2}}
-       </div>
-
-        <div class="form-group">
-            <label for="sub3" class="sr-only">sub3 : </label>
-            <!--<input type="text" id="sub3" class="form-control" placeholder="sub3" required autofocus>-->
-            {{form.sub3}}
+            <label for="marks2">marks2 : </label>
+            <input type="text" id="marks2" class="form-control" placeholder="marks2" required autofocus>
         </div>
 
         <div class="form-group">
-            <label for="marks3" class="sr-only">marks3 : </label>
-            <!--<input type="text" id="marks3" class="form-control" placeholder="marks3" required autofocus>-->
-            {{form.marks3}}
+            <label for="sub3">sub3 : </label>
+            <input type="text" id="sub3" class="form-control" placeholder="sub3" required autofocus>
+        </div>
+
+        <div class="form-group">
+            <label for="marks3">marks3 : </label>
+            <input type="text" id="marks3" class="form-control" placeholder="marks3" required autofocus>
         </div>
 
         <button class="btn btn-lg btn-success btn-block" type="submit">Submit</button>

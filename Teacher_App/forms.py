@@ -2,13 +2,9 @@ from django import forms
 
 from .models import models
 
-class ResultForm(forms.Form):
+from Student_App.models import Student
 
-    Roll_no = forms.IntegerField(widget=forms.TextInput(attrs={
-        'class':'form-control',
-        'placeholder':'Roll_no',
-        'id':'Roll_no',
-    }))
+class ResultForm(forms.Form):
 
     Rid = forms.IntegerField(widget=forms.TextInput(attrs={
         'class':'form-control',
@@ -60,15 +56,3 @@ class ResultForm(forms.Form):
 
 
 
-
-
-
-    Roll_no = models.ForeignKey(Student,on_delete=models.CASCADE)
-    Rid = models.IntegerField()
-    grade = models.CharField(max_length=4)
-    sub1 = models.CharField(max_length=20)
-    sub2 = models.CharField(max_length=20)
-    sub3 = models.CharField(max_length=20)
-    marks1 = models.IntegerField()
-    marks2 = models.IntegerField()
-    marks3 = models.IntegerField()
