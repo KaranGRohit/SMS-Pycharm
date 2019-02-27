@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'Principal_App.apps.PrincipalAppConfig',
     'Accountant_App.apps.AccountantAppConfig',
     'Parents_App.apps.ParentsAppConfig',
-    'mylogin.apps.MyloginConfig'
+    'mylogin.apps.MyloginConfig',
+    'accounts',
 ]
 
 MIDDLEWARE = [
