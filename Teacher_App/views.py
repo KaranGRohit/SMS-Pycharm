@@ -12,14 +12,14 @@ from Student_App.views import viewresult
 
 
 def uploadresult(request):
-    if request.method == 'post':
-        form = ResultForm(request.post)
+    form = ResultForm(request.POST)
 
-        if form.is_valid():
-            new_req = Result(Roll_no=request.post['Roll_no'], Rid=request.post['Rid'],grade=request.post['grade'],sub1=request.post['sub1'],
-                             sub2=request.post['sub2'],sub3=request.post['sub3'],marks1=request.post['marks1'],marks2=request.post['marks2'],marks3=request.post['marks3'])
-            new_req.save()
-            return redirect('uploadresult')
+    if form.is_valid():
+        new_req = Result(Roll_no=request.POST.get('Roll_no',''), Rid=request.POST.get('Rid',''),grade=request.POST.get('grade',''),sub1=request.POST.get('sub1',''),
+                         sub2=request.POST.get('sub2',''),sub3=request.POST.get('sub3',''),marks1=request.POST.get('marks1',''),marks2=request.POST.get('marks2',''),
+                         marks3=request.POST.get('marks3',''))
+        new_req.save()
+        return redirect('uploadresult')
 
     else:
         form = ResultForm()
