@@ -19,7 +19,7 @@ def uploadresult(request):
             new_req = Result(Roll_no=request.post['Roll_no'], Rid=request.post['Rid'],grade=request.post['grade'],sub1=request.post['sub1'],
                              sub2=request.post['sub2'],sub3=request.post['sub3'],marks1=request.post['marks1'],marks2=request.post['marks2'],marks3=request.post['marks3'])
             new_req.save()
-            return redirect('students/viewresult')
+            return redirect('uploadresult')
 
     else:
         form = ResultForm()
