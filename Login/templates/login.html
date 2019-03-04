@@ -1,22 +1,20 @@
 {% extends 'base.html' %}
-
-     {% block content %}
-	{% if form.errors %}
-		<p class="error"> Invalid Username or Password </p>
-	{% endif %}
-	<form  action="/login/auth/" method = "post">{% csrf_token %}
-		<div class="form" align="center">
-			<div class="row">
-				<h2><label for="username"> UserName:</label></h2>
-				<input type="text" name = "username" value = "" id="username">
-			</div>
-			<div class="row">
-				<h2><label for="password"> Password:</label></h2>
-<input type="password" name="password" value="" id="password">
-			</div>
-			<div class="row buttons">
-				<input type="submit" value="login" class="btn"/>
-			</div>
-		</div>
-	</form>
-      {% endblock %}
+{% block content %}
+<div class="modal fade" id="login-modal">
+    <div class="modal-dialog">
+          <div class="loginmodal-container">
+              <h1>Login to Your Account</h1><br>
+            <form action="/login/auth/" method="POST">
+              {% csrf_token %}
+              <input type="text" name="username" placeholder="Username">
+              <input type="password" name="password" placeholder="Password">
+              <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+            </form>
+              
+            <div class="login-help">
+              <a href="{% url 'adduser' %}"><font>New User?</font></a>
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}
