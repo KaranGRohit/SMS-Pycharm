@@ -20,6 +20,9 @@ class studinfo(DetailView):
     template_name = 'studdetails.html'
     context_object_name = 'batman'
 
+class studpage(TemplateView):
+    template_name = 'studenthome.html'
+
 def getstudentinfo(request):
 	c = {}
 	c.update(csrf(request))
@@ -48,6 +51,8 @@ def viewtimetable(request):
 
 #def studentinfo(request):
 #    return render_to_response('studentinfo.html')
+
+
 
 def addstudentinfo(request):
     sfname = request.POST.get('sfname', '')

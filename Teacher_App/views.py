@@ -28,6 +28,9 @@ def uploadresult(request):
     return render(request,'uploadresult.html',ctx)
 
 
+class teacherpage(TemplateView):
+    template_name = "teacherpage.html"
+
 class IndexView(TemplateView):
     template_name = 'teacher/index.html'
 
